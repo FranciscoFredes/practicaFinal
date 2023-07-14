@@ -1,15 +1,46 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '@/views/HomeVista.vue'
+import MensCloth from '@/views/MenCloth.vue'
+import WomenCloth from '@/views/WomenCloth.vue'
+import TechsView from '@/views/TechView.vue'
+import Cart from '@/views/Cart.vue'
+import NotFound from '@/components/NotFound.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'Home-view',
-    component: HomeView
-  },
+  {    
+      path: '*', 
+      name: 'NotFound',
+      component: NotFound
+    },    
+  
+    {    
+      path: '/home', 
+      name: 'Home',
+      component: HomeView
+    },  
+    {    
+      path: '/ropa-hombre', 
+      name: 'ropa-hombre',
+      component: MensCloth
+    },   
+    {    
+      path: '/carrito', 
+      name: 'Cart',
+      component: Cart
+    }, 
+    {    
+      path: '/ropa-mujer', 
+      name: 'ropa-mujer',
+      component: WomenCloth
+    },  
+    {    
+      path: '/tech', 
+      name: 'tech',
+      component: TechsView
+    },              
   {
     path: '/about',
     name: 'about',
