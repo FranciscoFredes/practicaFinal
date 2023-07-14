@@ -9,13 +9,27 @@ export default {
     data: function(){
         return {}
     },
-    // computed: {},
-    //methods: {}
+     computed: {},
+    methods: {
+        async    fetchMenCloth() {
+     try {
+      let response = await  fetch("/ropaHombre.json")
+      let json = await response.json();         
+       console.log(json)   
+    }
+     catch (error) {
+     console.log(error);
+     }
+        }
+    },
     // watch: {},
     // components: {},
     // mixins: [],
     // filters: {},
     // -- Lifecycle Methods
+    created(){
+        this.fetchMenCloth();
+    },
     // -- End Lifecycle Methods
 }
 </script>

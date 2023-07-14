@@ -9,13 +9,7 @@ import NotFound from '@/components/NotFound.vue'
 
 Vue.use(VueRouter)
 
-const routes = [
-  {    
-      path: '*', 
-      name: 'NotFound',
-      component: NotFound
-    },    
-  
+const routes = [  
     {    
       path: '/home', 
       name: 'Home',
@@ -40,7 +34,12 @@ const routes = [
       path: '/tech', 
       name: 'tech',
       component: TechsView
-    },              
+    },
+    {    
+      path: '*', 
+      name: 'NotFound',
+      component: NotFound
+    },                  
   {
     path: '/about',
     name: 'about',
