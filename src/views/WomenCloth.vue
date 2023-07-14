@@ -9,7 +9,7 @@
         </div>
         <div class="card-content">
           <h3 class="card-title">{{ item.title }}</h3>
-          <p class="card-subtitle">{{ item.subtitle }}</p>
+          <p class="card-subtitle">$ {{ item.price }}</p>
           <p class="card-description">{{ item.description.slice(0,100)  }}</p>
         </div>
         <div class="card-actions">

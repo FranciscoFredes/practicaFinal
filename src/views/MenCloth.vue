@@ -9,32 +9,33 @@
         </div>
         <div class="card-content">
           <h3 class="card-title">{{ item.title }}</h3>
-          <p class="card-subtitle">{{ item.subtitle }}</p>
+          <p class="card-subtitle">$ {{ item.price }}</p>
           <p class="card-description">{{ item.description.slice(0,100) }}</p>
         </div>
         <div class="card-actions">
-          <button class="card-button">Agregar <v-icon>mdi-cart</v-icon></button>
+          <button class="card-button" >Agregar <v-icon>mdi-cart</v-icon></button>
         </div>
       </div>
-    </div>
+    </div>   
      </div>
     
 </template>
 
 <script>
 
+
 export default {
     name: 'Men-cloth',
     props: {     
-    
+      
     },
     data: function(){
-        return { 
-            menClothData: []          
+        return {          
+              menClothData:[],    
         }
     },
-     computed: {},
-    methods: {
+    //computed: {       },
+    methods: {      
         async    fetchMenCloth() {
      try {
       let response = await  fetch("/ropaHombre.json")
@@ -43,9 +44,9 @@ export default {
     }
      catch (error) {
      console.log(error);
-     }
-        }
-    },
+     }  
+  
+    }},
     // watch: {},   
     
     // mixins: [],

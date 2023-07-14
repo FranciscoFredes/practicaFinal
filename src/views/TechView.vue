@@ -9,12 +9,20 @@
         </div>
         <div class="card-content">
           <h3 class="card-title">{{ item.title }}</h3>
-          <p class="card-subtitle">{{ item.subtitle }}</p>
+          <p class="card-subtitle">$ {{ item.price }}</p>
           <p class="card-description">{{ item.description.slice(0,100) }}</p>
         </div>
-        <div class="card-actions">
-          <button class="card-button">Agregar <v-icon>mdi-cart</v-icon></button>
-        </div>
+       <v-card-actions>
+      <v-btn
+        color="blue darken-1" 
+        text
+        justify= "center"
+        @click="add"
+      > 
+        <v-icon>mdi-cart</v-icon>
+        Agregar
+      </v-btn>
+        </v-card-actions>
       </div>
     </div>
      </div>
@@ -43,9 +51,9 @@ export default {
     }
      catch (error) {
      console.log(error);
-     }
-        }
-    },
+     }},      
+        
+      },    
     // watch: {},   
     
     // mixins: [],

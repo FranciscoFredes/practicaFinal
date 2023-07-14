@@ -12,7 +12,7 @@
           gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"
         ></v-img>
       </template>     
-      <v-toolbar-title align-with-title class="font-weight-bold" id="scrolling-techniques-4">La Tiendita</v-toolbar-title>
+      <v-toolbar-title align-with-title class="font-weight-bold" id="scrolling-techniques-4">De Todito</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
